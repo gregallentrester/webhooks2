@@ -1,0 +1,14 @@
+#!/bin/bash -p
+
+
+echo;echo $1; echo
+meta=$(date +"%T")
+
+all="$1 | \n$meta"
+
+curl -X POST \
+  -H 'Content-type: application/json' \
+  -d '{"text":"'"$all"'"}' \
+  https://hooks.slack.com/services/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
+
+echo
